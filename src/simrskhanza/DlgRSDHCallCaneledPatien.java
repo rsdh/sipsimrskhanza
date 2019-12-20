@@ -402,7 +402,10 @@ public class DlgRSDHCallCaneledPatien extends javax.swing.JDialog {
             JOptionPane.showMessageDialog(null, "Pilih nomber pasiennya dahulu !");
             return;
         }
-        
+        /*
+        * Di sini dimana dialog shoft phone harus satu instance dan statis
+        * jangan berkali kali instance tersebut di buat baru
+        */
         if (OneInstanceDialog.dlgRSDHExtentionPhone != null) {
            OneInstanceDialog.dlgRSDHExtentionPhone.setVisible(true);
            OneInstanceDialog.dlgRSDHExtentionPhone.Call(cbPreNum.getSelectedItem().toString() + txtNoPhone.getText());

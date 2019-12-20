@@ -1,7 +1,9 @@
-/*
- * SIP Shoftphone
- * This program is simple extention for SIMRSKhanza
- * 
+/**
+ * This program is simple extention for SIMKES Khanza
+ * Shoftphone SIMKES Khanza
+ * This program extention license under GNU Public License v2
+ * Copyright (C) 2019  rizki999 IT RSDH
+ * see more detail about license  in licese.txt
  */
 package siprsdh;
 
@@ -55,6 +57,9 @@ import net.sourceforge.peers.sip.transport.SipResponse;
 /**
  *
  * @author rizki999 IT RSDH
+ * Di sini dimana dialog shoft phone harus satu instance dan statis
+ * jangan berkali kali instance tersebut di buat baru
+ * 
  */
 public class DlgRSDHExtentionPhone extends javax.swing.JDialog implements SipListener, AbstractSoundManagerFactory, PhoneSoundListener {
 
@@ -511,14 +516,6 @@ public class DlgRSDHExtentionPhone extends javax.swing.JDialog implements SipLis
         tglReg = "";
     }
     
-    public String getNoRawat() {
-        return txtPhoneName.getText();
-    }
-    
-    public String getTglRegOnline() {
-        return tglReg;
-    }
-    
     public void Call(String num) {
         if (btnCall.getText().equalsIgnoreCase("Call")) {
             txtPhoneNum.setText(num);
@@ -760,7 +757,7 @@ public class DlgRSDHExtentionPhone extends javax.swing.JDialog implements SipLis
 
     private void btnShutdownActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnShutdownActionPerformed
         SwingUtilities.invokeLater(new Runnable() {
-
+            
             @Override
             public void run() {
                 try {
