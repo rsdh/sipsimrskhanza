@@ -1,6 +1,7 @@
 # sipsimrskhanza
 
-note untuk di tambahkan di menu simkes khanza
+# note 
+untuk di tambahkan di menu simkes khanza
 dialog Shoftphone tersebut haru satu instance 
 di krnakan takut berulang register sip dan akan menyebabkan konflik
 
